@@ -9,15 +9,13 @@ const config: Config = {
   coverageProvider: 'v8',
   testEnvironment: 'jsdom',
   
-
   collectCoverage: true, 
-  
-
   collectCoverageFrom: [
     'src/**/*.{js,jsx,ts,tsx}',
     '!src/**/*.d.ts',
     '!src/**/_*.{js,jsx,ts,tsx}',
   ],
+
 
   coverageThreshold: {
     global: {
@@ -29,6 +27,19 @@ const config: Config = {
   },
 
   setupFilesAfterEnv: ['<rootDir>/jest.setup.ts'],
+
+  testPathIgnorePatterns: [
+    '<rootDir>/.next/',
+    '<rootDir>/node_modules/',
+    '<rootDir>/tests/', 
+    '<rootDir>/test/',
+    '.*\\.spec\\.ts' 
+  ],
+
+  testMatch: [
+    "**/__tests__/**/*.[jt]s?(x)",
+    "**/?(*.)+(test).[jt]s?(x)"
+  ],
 }
 
 export default createJestConfig(config)
