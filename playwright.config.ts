@@ -4,7 +4,9 @@ import { defineConfig, devices } from '@playwright/test';
  * See https://playwright.dev/docs/test-configuration.
  */
 export default defineConfig({
-  testDir: './tests', // Переконайся, що папка називається саме tests, або зміни на './test'
+  // Переконайся, що папка з файлом app.spec.ts називається саме 'tests'
+  testDir: './tests', 
+  
   /* Run tests in files in parallel */
   fullyParallel: true,
   /* Fail the build on CI if you accidentally left test.only in the source code. */
@@ -15,6 +17,7 @@ export default defineConfig({
   workers: process.env.CI ? 1 : undefined,
   /* Reporter to use. See https://playwright.dev/docs/test-reporters */
   reporter: 'html',
+  
   /* Shared settings for all the projects below. See https://playwright.dev/docs/api/class-testoptions. */
   use: {
     /* ФІКС: Встановлюємо базовий URL, щоб Playwright знав куди заходити */
@@ -43,8 +46,10 @@ export default defineConfig({
 
   webServer: {
     command: 'npm run dev',       
-    url: 'http://localhost:3000',  
+    url: 'http://localhost:3000', 
     reuseExistingServer: !process.env.CI, 
-    timeout: 120 * 1000,           
+    timeout: 120 * 1000,          
+    stdout: 'ignore',             
+    stderr: 'pipe',           
   },
 });
