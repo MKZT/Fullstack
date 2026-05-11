@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="uk">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>City Events Dashboard</title>
+
+    <link rel="stylesheet" href="style.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+    <div class="sidebar">
+
+        <div class="logo">
+            EVENTS
+        </div>
+
+        <ul class="menu">
+
+            <li class="active">🏠 Головна</li>
+            <li>🎉 Події</li>
+            <li>📍 Локації</li>
+            <li>⭐ Популярне</li>
+            <li>⚙ Налаштування</li>
+
+        </ul>
+
+    </div>
+
+
+    <main class="main-content">
+
+        <header class="topbar">
+
+            <div>
+                <h1>Цікаві події міста</h1>
+                <p>Знайди найкращі івенти поруч</p>
+            </div>
+
+            <button class="add-event-btn">
+                + Додати подію
+            </button>
+
+        </header>
+
+
+        <section class="search-section">
+
+            <input type="text" placeholder="Пошук подій...">
+
+            <select>
+                <option>Усі категорії</option>
+                <option>Концерти</option>
+                <option>IT</option>
+                <option>Фестивалі</option>
+            </select>
+
+            <button>
+                Пошук
+            </button>
+
+        </section>
+
+
+        <section class="cards-section">
+
+            <div class="event-card">
+
+                <img src="images/event1.jpg">
+
+                <div class="card-content">
+
+                    <div class="badge music">
+                        Концерт
+                    </div>
+
+                    <h2>Music Festival 2026</h2>
+
+                    <p>
+                        Великий open-air фестиваль
+                        з популярними артистами.
+                    </p>
+
+                    <div class="card-info">
+                        <span>📍 Київ</span>
+                        <span>📅 15 Червня</span>
+                    </div>
+
+                    <button class="details-btn">
+                        Детальніше
+                    </button>
+
+                </div>
+
+            </div>
+
+
+            <div class="event-card">
+
+                <img src="images/event2.jpg">
+
+                <div class="card-content">
+
+                    <div class="badge tech">
+                        IT
+                    </div>
+
+                    <h2>AI Summit Ukraine</h2>
+
+                    <p>
+                        AI, стартапи,
+                        технології майбутнього.
+                    </p>
+
+                    <div class="card-info">
+                        <span>📍 Львів</span>
+                        <span>📅 22 Червня</span>
+                    </div>
+
+                    <button class="details-btn">
+                        Детальніше
+                    </button>
+
+                </div>
+
+            </div>
+
+
+            <div class="event-card">
+
+                <img src="images/event3.jpg">
+
+                <div class="card-content">
+
+                    <div class="badge business">
+                        Business
+                    </div>
+
+                    <h2>Startup Forum</h2>
+
+                    <p>
+                        Форум для підприємців,
+                        інвесторів та бізнесу.
+                    </p>
+
+                    <div class="card-info">
+                        <span>📍 Одеса</span>
+                        <span>📅 30 Червня</span>
+                    </div>
+
+                    <button class="details-btn">
+                        Детальніше
+                    </button>
+
+                </div>
+
+            </div>
+
+        </section>
+
+    </main>
+
+</body>
+
+</html>
